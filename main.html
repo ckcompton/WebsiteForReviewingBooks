@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booksters</title>
+    </head>
+<body>
+    <br>
+
+    <form action="/login" method="POST">
+    <input type="email" width="50" placeholder="Email" name="user_email">
+    <input type="password" width="50" placeholder="Password" name="user_password">
+    <input type="submit" value="Login">
+    </form>
+    <br>
+
+    <form action="/signup" method="POST">
+     <input type="text" width="50" placeholder="first name" name="user_firstname">
+    <input type="text" width="50" placeholder="last name" name="user_lastname">
+    <input type="email" width="50" placeholder="email" name="user_email">
+    <input type="password" width="50" placeholder="Password" name="user_password">
+    <input type="url" width="50" placeholder="URl" name="user_url">
+    <input type="date" width="50" placeholder="DOB" name="dob">
+    <input type="url" width="50" placeholder="pic url" name="user_pic_url">
+    <input type="submit" value="Signup">
+    </form>
+
+
+
+    <br>
+
+
+
+<ul>
+    {% for error in errors %}
+    {{error}}
+    {% for sk in results %}
+        <li>{{ sk }}</li>
+    {% endfor %}
+    {% endfor %}
+
+
+</ul>
+</body>
+</html>
